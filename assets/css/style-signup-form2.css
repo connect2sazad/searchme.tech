@@ -1,0 +1,59 @@
+.left{
+	float: left;
+	/* display: none; */
+	cursor: pointer;
+}
+.right{
+	float: right;
+	cursor: pointer;
+}
+.page{
+	overflow: hidden;
+}
+#page-1{
+	display: none;
+	margin-left: 100%;
+}
+#page-2{
+	display: none;
+	margin-left: 100%;
+}
+#page-3{
+	display: none;
+}
+.nav button{
+	font-size: 30px;
+	color: #0000ff;
+	cursor: pointer;
+	display: none;
+}
+
+/* puchu */
+
+.page-wrap{
+	height: 90vh;
+	display: flex;
+	align-items: center;
+}
+
+.info-set-1 .input-field{
+	width: 30vw !important;
+}
+.info-set-2 .input-field{
+	width: 100% !important;
+}
+@media only screen and (min-width: 768px){
+	.page-wrap{
+		display: initial;
+	}
+	.input-field{
+		width: 20vw !important;
+	}
+}
+.page-content{
+	font-size: 14px !important;
+}
+
+.page-title img{
+	filter: invert(97%) sepia(2%) saturate(2279%) hue-rotate(87deg) brightness(103%) contrast(103%);
+}

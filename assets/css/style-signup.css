@@ -1,0 +1,87 @@
+
+.method-button-group .btn-method-left{
+
+    border-radius: 27px 0px 0px 27px;
+}
+
+.method-button-group .btn-method-right{
+
+    border-radius: 0px 27px 27px 0px;
+}
+
+.btn-active-method{
+    background: var(--dark-blue);
+    color: var(--cyan);
+}
+
+.btn-inactive-method{
+    background: #DDF9F4;
+    color: var(--cyan);
+}
+
+.method-desc{
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.box-wrap{
+    background: #9ED8D8;
+    border-radius: 8px;
+}
+
+.form-wrap label{
+    cursor: default;
+    user-select: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+/* 
+.input-field{
+    background: #E9FFF9;
+    width: 100%;
+    height: 48px;
+    margin-top: 6px;
+    border: 1px solid transparent;
+    padding: 0px 16px;
+}
+.input-field:focus{
+    outline: 0;
+    border: 1px solid var(--dark-blue);
+}
+    @media(min-width:576px){
+        .input-field{
+            width: 350px;
+        }
+    }
+    @media(max-width:576px){
+        .input-field{
+            font-size: 14px;
+        }
+    }
+select{
+    padding-right: 40px;
+}
+
+.input-field[name="enterOTP"]{
+    width: max-content;
+    max-width: 100px;
+
+}
+
+.btn-action{
+    background: var(--dark-blue);
+    color: var(--cyan);
+    border-radius: 4px;
+    padding: 12px 36px;
+    width: max-content;
+}
+    @media(max-width:991px){
+        .btn-action{
+            padding: 12px 16px;
+        }
+    }
+
+.password-section{
+    position: relative;
+} */
