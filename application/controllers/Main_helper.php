@@ -155,6 +155,7 @@ private function _send_mail($email,$random_val){
 			// $data['status']=1;
 			if($get_data->first_name!=""){
 				$data['status']=1;
+				$this->session->set_userdata('searchme_login',$get_data->sn);
 			}else{
 				$this->session->set_userdata('searchme_login_id_verify_otp',$get_data->sn);
 				$data['status']=2;
@@ -219,6 +220,20 @@ public function submit_addon_data(){
 	echo json_encode($data);	
 }
 
+
+public function get_user_account_data(){
+	$input=$this->security->xss_clean($this->input->post());
+
+	$this->db->select('a.email,a.first_name,a.middle_name,a.last_name,a.gender,b.reg_no,b.roll_no,b.university,b.college,b.course,b.hostel_no,b.branch,b.room_no,b.phone_no,b.alt_phone_no,b.address1,b.city,b.state');
+	$this->db->from("user_detail as a")->where('sn',$input['user_id']);
+	$this->db->join("user_addon_data as b","a.sn=b.user_id");
+	$data['data']=$this->db->get()->row();
+
+	$data['key']=$this->security->get_csrf_hash();
+
+	echo json_encode($data);	
+
+}
 
 
 }

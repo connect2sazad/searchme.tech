@@ -35,6 +35,10 @@ class Main extends CI_Controller {
 		$this->load->view('website/forgetPass');
 	}
 
+	public function user_profile(){
+		$this->load->view('website/user_account');
+	}
+
 	public function loggedIn(){
 		echo "Acoount Created";
 	}
