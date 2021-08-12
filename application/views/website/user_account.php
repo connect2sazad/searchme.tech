@@ -93,7 +93,7 @@
 						<li>Roll No</li>
 						<li>Branch</li>
 						<li>Call</li>
-						<li>Mail</li>
+						<li>EMail</li>
 						<li>Web</li>
 						<li>Place</li>
 						<li>Home</li>
@@ -107,7 +107,7 @@
 						<li style="text-transform:uppercase" id="branch">Branch</li>
 						<li id="call">+91 123 456 7890</li>
 						<li id="email">userwebsite123@mail.com</li>
-						<li><a href="#" style="color:darkblue;">searchme.com</a></li>
+						<li><a href="./" style="color:darkblue;">searchme.tech/<span id="sn_id">sn_id</span></a></li>
 						<li id="address">Place Name</li>
 						<li id="place">City, State</li>
 						<li id="college">College Name</li>
@@ -291,7 +291,7 @@
 
 <script>
 	var key = "<?php echo $this->security->get_csrf_hash(); ?>";
-
+	var sn_id = "<?= $this->session->userdata("searchme_login"); ?>";
 	$.ajax({
 		url: "<?= base_url('main_helper/get_user_account_data'); ?>",
 		type: "POST",
@@ -315,6 +315,7 @@
 			$('#roll_no').text(user['roll_no']);
 			$('#branch').text(user['branch']);
 			$('#address').text(user['address1']);
+			$('#sn_id').text(sn_id);
 		},
 		error: function(data) {
 			console.log(data);
