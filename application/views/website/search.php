@@ -94,7 +94,6 @@ $this->load->view('website/link_import');
 
     .apply-filter:hover {
         background-color: #314666;
-        background-color: ;
         border: 2px solid white;
         color: white;
     }
