@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>User Profile</title>
+	
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">-->
@@ -12,11 +13,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="<?=base_url();?>assets/css/style-user_account.css">
+	
+	<?php
+
+$this->load->view('website/link_import');
+?>
 
 </head>
 
 <body>
 
+<?php
+
+        $this->load->view('website/nav_bar');
+    ?>
 
     <div class="profile-wrapper">
 
