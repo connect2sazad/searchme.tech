@@ -72,9 +72,9 @@ $this->load->view('website/nav_bar');
                                     <div class="input-field d-flex">
                                         <select class="select-custom" name="" id="gender">
                                             <option value="">Gender</option>
-                                            <option value="m">Male</option>
-                                            <option value="f">Female</option>
-                                            <option value="o">Others</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Others">Others</option>
                                         </select>
                                     </div>   
                                 </div>
