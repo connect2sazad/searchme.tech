@@ -17,7 +17,7 @@ Home
 Home
  - Update the site logo
  - Update site name from 'Made with ❤ by SrchMe Team' to 'Made with ❤ by SearchMe Team' in footer section
- - Add Copyright text in the footer section along with the Year
- - Add 'Account' option if the user **is not logged in** in the footer section
- - Remove 'Log In' and 'Sign Up' option if the user **is logged in** in the footer section
- - Add 'email' and 'address' in the footer section
+ - Fix errors in menu in responsive mode
+ - Fix responsive errors in 'iPad' Mode ( 768px x 1024px )
+    - Set 'Sign Up for Free' button style
+    - Set the style of the blocks of 'Features'
