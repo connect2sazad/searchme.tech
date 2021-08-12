@@ -48,4 +48,10 @@ class Main extends CI_Controller {
 		$this->load->view('website/search');
 	}
 
+
+	public function logout() {
+		$this->session->unset_userdata("searchme_login");
+		redirect("");
+	}
+
 }
