@@ -1,4 +1,4 @@
-# Serchme.tech
+# searchme.tech
 
 ## Changes to be implemented
 
@@ -48,3 +48,7 @@ User Profile
  - Set styling for 'Social Contact' section ( styles get deformed if the content is multiline ) in the left side
  - Fix errors in all modes ( all screen sizes )
     - Set styling for the Header section and menus in responsive mode
+    - Set styling for the texts in 'About' section ( aign the text content to justify )
+    - Set styling for the Profile Picture ( align it to the center of the screen )
+    - Set styling for the Account Name ( align it to the center of the screen )
+    - Set styling for the 'Follow' & 'Message' button ( align it to the center of the screen ))
