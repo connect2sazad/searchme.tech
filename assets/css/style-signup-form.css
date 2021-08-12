@@ -10,58 +10,37 @@
 .page{
 	overflow: hidden;
 }
-.page11{
-	position : relative;
-}
 #page-1{
 	display: none;
-	height: 150vh;
 	margin-left: 100%;
-
-	
 }
 #page-2{
 	display: none;
-	height: 90vh;
 	margin-left: 100%;
-	
-	
-	
 }
 #page-3{
 	display: none;
 }
 .nav button{
 	font-size: 30px;
-    color: #0000ff;
+	color: #0000ff;
 	cursor: pointer;
 	display: none;
 }
 
-
-/* .address-input{ 
-	width:100%;
-}
-.address-input{
-
-} */
+/* puchu */
 
 .page-wrap{
-	
-	display: contents;
+	height: 90vh;
+	display: flex;
 	align-items: center;
 }
 
 .info-set-1 .input-field{
 	width: 30vw !important;
-	margin:auto;
 }
-
 .info-set-2 .input-field{
-	width: 30vw !important;
-	margin:auto;
-  
-	
+	width: 100% !important;
 }
 @media only screen and (min-width: 768px){
 	.page-wrap{
@@ -70,11 +49,6 @@
 	.input-field{
 		width: 20vw !important;
 	}
-
-     .input-field-address{
-		 width:59vw !important;
-	 }	
-	
 }
 .page-content{
 	font-size: 14px !important;

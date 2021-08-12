@@ -21,7 +21,7 @@
         <style> 
             ::-webkit-scrollbar{
                 width: 0.1px;
-            } 
+            }  
             .custom-error{
                 /*border: 3px solid black;*/
                 position: relative;

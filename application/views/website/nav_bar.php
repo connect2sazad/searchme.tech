@@ -1,6 +1,6 @@
 
  <!-- navbar -->
-    <div class="container-custom py-md-2">
+    <div class="container-custom py-md-2 navbar-id" style="z-index:10;">
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?=base_url();?>">
@@ -16,10 +16,13 @@
                             <a class="nav-link" aria-current="page" href="<?=base_url();?>">Home</a>
                         </li>
                         <li class="nav-item mt-3 mt-md-0  mr-md-5">
-                            <a class="nav-link" href="#">Search</a>
+                            <a class="nav-link" href="<?=base_url('main/search');?>">Search</a>
                         </li>
                         <li class="nav-item mt-3 mt-md-0  mr-md-5">
                             <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item mt-3 mt-md-0  mr-md-5">
+                            <a class="nav-link" href="<?=base_url('main/user_profile');?>">Account</a>
                         </li>
                         <form class="d-flex mt-3 mt-md-0 ">
                             <a href="<?=base_url('signup');?>" class="btn-signup px-4 py-2 rounded text-decoration-none">Sign in</a>

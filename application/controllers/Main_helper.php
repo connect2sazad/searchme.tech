@@ -230,9 +230,20 @@ public function get_user_account_data(){
 	$data['data']=$this->db->get()->row();
 
 	$data['key']=$this->security->get_csrf_hash();
-
 	echo json_encode($data);	
 
+}
+
+public function filter_data_search(){
+	$input=$this->security->xss_clean($this->input->post());
+	
+	$this->db->select("a.first_name,a.last_name,a.middle_name,a.gender,b.course,b.branch")->from("user_detail as a");
+	// $this->db->where(['course'=>$input['course'], 'branch'=>$input['branch'], 'hostel_no'=>$input['hostel_no'],'room_no'=>$input['room_no'],'address1'=>$input['address']]);
+	$this->db->join("user_addon_data as b","a.sn=b.user_id");
+	$data['data']=$this->db->get()->result();
+	
+	$data['key']=$this->security->get_csrf_hash();
+	echo json_encode($data);	
 }
 
 

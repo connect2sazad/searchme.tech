@@ -29,7 +29,7 @@ class Main extends CI_Controller {
 			
 		}
 		
-	}
+	} 
 
 	public function resetpass(){
 		$this->load->view('website/forgetPass');
@@ -43,5 +43,9 @@ class Main extends CI_Controller {
 		echo "Acoount Created";
 	}
 
+
+	public function search(){
+		$this->load->view('website/search');
+	}
 
 }

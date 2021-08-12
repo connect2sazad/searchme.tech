@@ -1,10 +1,10 @@
 .navbar-custom{
-    
-    overflow: hidden;
+    z-index: 9999999999;
+    height: 10vh;
 }
 
 .navbar-custom .nav-item{
-    margin-right: 36px;
+    /* margin-right: 36px; */
 }
 
 .navbar-custom .nav-link{
@@ -32,7 +32,7 @@
 
 @media(max-width:991px){
     .navbar-custom{
-        background: var(--dark-blue) !important;
+        background: var(--dark-blue) ;
     }
 }
 
@@ -40,10 +40,10 @@
 .footer-item{
     font-size: 18px;
     margin-top: 18px;
-} 
+}
 .footer-item a:hover{
     color: var(--light);
-} 
+}
 
 .footer-list{
     list-style: none;
