@@ -283,6 +283,8 @@
 		<div class="clearfix"></div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-t6I8D5dJmMXjCsRLhSzCltuhNZg6P10kE0m0nAncLUjH6GeYLhRU1zfLoW3QNQDF" crossorigin="anonymous"></script>
+    
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
 	<script src="<?= base_url(); ?>assets/js/function.js"></script>
@@ -296,7 +298,7 @@
 		url: "<?= base_url('main_helper/get_user_account_data'); ?>",
 		type: "POST",
 		async: false,
-		data: {
+		data: { 
 			"<?php echo $this->security->get_csrf_token_name(); ?>": key,
 			user_id: "<?= $this->session->userdata("searchme_login"); ?>"
 		},
@@ -316,7 +318,7 @@
 			$('#branch').text(user['branch']);
 			$('#address').text(user['address1']);
 			$('#sn_id').text(sn_id);
-		},
+		}, 
 		error: function(data) {
 			console.log(data);
 		}

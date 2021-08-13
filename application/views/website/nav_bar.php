@@ -1,6 +1,6 @@
 
  <!-- navbar -->
-    <div class="container-custom py-md-2">
+    <div class="container-custom py-md-2" style="place-items: normal; width:100%;">
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?=base_url();?>">
