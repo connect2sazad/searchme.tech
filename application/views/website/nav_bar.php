@@ -4,7 +4,7 @@
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?=base_url();?>">
-                    <img src="<?=base_url('assets/images/srch_it_logo.svg');?>" alt="seacrh_it_logo" height="60">
+                    <img src="<?=base_url('assets/images/search_me_logo.png');?>" alt="seacrh_it_logo" height="80">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
