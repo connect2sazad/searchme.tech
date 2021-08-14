@@ -386,7 +386,7 @@ $this->load->view('website/nav_bar');
                 console.log(data);
                 key=data.key;
                 if(data.data){
-                    alert("account Created Successfully");
+                    window.location.href = "<?= base_url('main/search')?>";
                 }
 
             },

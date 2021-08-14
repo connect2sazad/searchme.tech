@@ -1,8 +1,18 @@
-
+<?php
+    $sign_btn="";
+    $sing_url="";
+    if(!$this->security->xss_clean($this->session->userdata('searchme_login'))){
+        $sign_btn="Sing in";
+        $sing_url="signup";
+    }else{
+        $sign_btn="Account";
+        $sing_url="main/user_profile";
+    }
+?>
  <!-- navbar -->
     <div class="container-custom py-md-2" style="place-items: normal; width:100%;">
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
+            <div class="container-fluid"> 
                 <a class="navbar-brand" href="<?=base_url();?>">
                     <img src="<?=base_url('assets/images/search_me_logo.png');?>" alt="seacrh_it_logo" height="80">
                 </a>
@@ -21,11 +31,11 @@
                         <li class="nav-item mt-3 mt-md-0  mr-md-5">
                             <a class="nav-link" href="#">About Us</a>
                         </li>
-                        <li class="nav-item mt-3 mt-md-0  mr-md-5">
+                        <!-- <li class="nav-item mt-3 mt-md-0  mr-md-5">
                             <a class="nav-link" href="<?=base_url('main/user_profile');?>">Account</a>
-                        </li>
+                        </li> -->
                         <form class="d-flex mt-3 mt-md-0 ">
-                            <a href="<?=base_url('signup');?>" class="btn-signup px-4 py-2 rounded text-decoration-none">Sign in</a>
+                            <a href="<?=base_url($sing_url);?>" class="btn-signup px-4 py-2 rounded text-decoration-none" id="sign_btn_nav"><?=$sign_btn;?></a>
                         </form>
                     </ul>
     

@@ -700,7 +700,7 @@ $("#submit_btn_login").click(function() {
                         // alert(data.data);
                         if(data.status==1){
                             $("#error_email_login").html("");
-                            alert("Logged In");
+                            window.location="<?=base_url('main/search');?>"
                         }else if(data.status==0){
                             login_error();
                         }else if(data.status==2){

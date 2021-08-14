@@ -25,7 +25,7 @@
 
 	<?php
 
-	$this->load->view('website/nav_bar');
+	$this->load->view('website/nav_bar'); 
 	?>
 
 	<div class="profile-wrapper">
@@ -294,6 +294,11 @@
 <script>
 	var key = "<?php echo $this->security->get_csrf_hash(); ?>";
 	var sn_id = "<?= $this->session->userdata("searchme_login"); ?>";
+
+	$("#sign_btn_nav").text("Logout");
+	$("#sign_btn_nav").attr("href","<?= base_url('main/logout');?>");
+	
+
 	$.ajax({
 		url: "<?= base_url('main_helper/get_user_account_data'); ?>",
 		type: "POST",

@@ -215,9 +215,12 @@ public function submit_addon_data(){
 	$input=$this->security->xss_clean($this->input->post());
 	$this->load->model('user_model');
 	$data['data']=$this->user_model->submit_addon($input);
+	if($data['data']){
+		$this->session->set_userdata('searchme_login',$input['user_id']);
+	}
 	$data['key']=$this->security->get_csrf_hash();
 
-	echo json_encode($data);	
+	echo json_encode($data); 	
 }
 
 
@@ -246,6 +249,6 @@ public function filter_data_search(){
 	echo json_encode($data);	
 }
 
-
+ 
 
 }
