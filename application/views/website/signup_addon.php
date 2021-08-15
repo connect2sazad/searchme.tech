@@ -151,9 +151,10 @@ $this->load->view('website/nav_bar');
                                     <h4>Course*</h4>
                                     <div class="input-field d-flex">
                                         <select class="select-custom" name="" id="course">
-                                            <option value="b.tech">B.Tech</option>
-                                            <option value="m.tech">M.Tech</option>
-                                            <option value="mba">MBA</option>
+                                            <option value="B.Tech">B.Tech</option>
+                                            <option value="M.Tech">M.Tech</option>
+                                            <option value="MBA">MBA</option>
+                                            <option value="MCA">MCA</option>
                                         </select>
                                     </div>                                
                                 </div>
@@ -193,7 +194,7 @@ $this->load->view('website/nav_bar');
                     <!-- <div class="page-title d-flex flex-row  align-items-start"> -->
                     <img src="<?=base_url();?>assets/images/personal-information.svg" class="me-5" width="64px" alt="personal-information-icon">
                         <span class="">
-                            <h1 >&nbspPersonal Information</h1>
+                            <h1 >&nbsp;Personal Information</h1>
                             <h6 class="fw-light">&nbspFill the following personal information & click on Sumbit.</h6>
                         </span>
                     </div>
