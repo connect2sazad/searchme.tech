@@ -14,6 +14,48 @@
 
         
 </head>
+<style>
+     @media(max-width:800px){
+        .landing{
+            height: max-content;
+        }
+        .features .card-wrap{
+            width: 221px !important;
+            background-color: var(--dark-blue);
+            filter: drop-shadow(8px 8px 16px rgba(29, 51, 84, 0.24));
+        }
+        .landing-button-signup {
+    width: 49%;
+}
+    }
+
+
+    @media(max-width:1024px){
+
+        .landing {
+    height: 49vh;
+}
+
+    }
+
+
+    @media(max-width:500px){
+        .features .card-wrap{
+            width: 271px !important;
+            background-color: var(--dark-blue);
+            filter: drop-shadow(8px 8px 16px rgba(29, 51, 84, 0.24));
+        }
+        .landing-button-signup {
+    width: 100%;
+    
+}
+
+.landing {
+    height:90vh;
+}
+
+    }
+</style>
 <body>
    <?php
 

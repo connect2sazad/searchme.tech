@@ -10,7 +10,7 @@
     }
 ?>
  <!-- navbar -->
-    <div class="container-custom py-md-2" style="place-items: normal; width:100%;">
+    <div class="container-custom py-md-2"  style="background-color: #1D3354;;width: 100%;top:0;" id="nav">
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark">
             <div class="container-fluid"> 
                 <a class="navbar-brand" href="<?=base_url();?>">

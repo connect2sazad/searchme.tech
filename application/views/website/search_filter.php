@@ -15,6 +15,13 @@
 
 
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 
@@ -29,14 +36,26 @@
 </head>
 
 <style>
+	:root{
+    --light: #E9FFF9;
+    --cyan: #9ED8D8;
+    --dark-blue: #1D3354;
+    --dark: #121212;
+    --muted: #4F678B;
+}
+	#nav{
+		position: fixed !important;
+		z-index: 9 !important;
+	}
 	body {
-		background-color: #212529;
+		background-color: #1D3354;
 	}
 
-	ul li {
-		list-style: none;
-		margin-left: -30px;
-	}
+	
+	label {
+    display: inline-block;
+    margin-bottom: -0.5rem;
+}
 
 	.main-content {
 		display: flex;
@@ -45,7 +64,7 @@
 	.student-data {
 		margin-left: auto;
 		width: 75%;
-		padding: 100px;
+		padding: 135px;
 	}
 
 	.dropdown {
@@ -101,17 +120,23 @@
 	#filter-btn {
 		display: none;
 	}
+	.filter-section{
+
+		z-index: -1;
+		
+	}
 
 	.filter-section form {
 		z-index: 111;
 		position: fixed;
 		background-color: #ffffff;
-		padding: 100px 80px 80px 80px;
+		padding: 72px;
 		height: 100%;
 		bottom: 0%;
-
+		margin-top:71px;
 
 		width: 72em;
+		border-radius:0 8px 0 0;
 
 
 
@@ -174,6 +199,38 @@
 		z-index: 112;
 	}
 
+	.dropdown::-webkit-scrollbar {
+  width: 15px !important;
+  border-radius: 100px;
+}
+ 
+
+ 
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #384861 !important;
+  
+  border-radius: 100px;
+
+}
+
+.apply-filter {
+        background-color: #4F678B;
+        height: 45px;
+        width: 15em;
+        border-radius: 5px;
+        border: 2px solid white;
+        color: white;
+
+
+    }
+	#heading h1{
+            
+            color:var(--cyan);
+            font-family: 'Cabin', sans-serif;
+
+            font-size: 2.6em;
+        }
+
 
 	@media only screen and (max-width: 600px) {
 
@@ -225,7 +282,7 @@
 
 			position: absolute;
 
-			padding: 100px 80px 80px 80px;
+			padding: 100px 80px 80px 56px;
 			border-radius: 0;
 			height: 100%;
 			width: 100%;
@@ -275,9 +332,28 @@
 
 		}
 
-		.navbar-custom {
-			background-color: #212529 !important;
+		
+
+		.apply-filter {
+            
+            height: 38px;
+            width: 17em;
+            border-radius: 5px;
+            border: 2px solid white;
+            color: white;
+            font-size: 13px;
+            z-index: 1111;
+
+
+        }
+		.search-student input{
+			width:100% !important;
 		}
+		#heading h1{
+            font-weight:;
+            color:var(--cyan);
+            font-size: 2em;
+        }
 
 	}
 </style>
@@ -301,11 +377,24 @@
 	$this->load->view('website/nav_bar');
 	?>
 
-	<div class="filter-section" style="">
-		<div>
+	<div class="filter-section" style="margin-top:0;" >
+		<div >
 
 
 			<form class="dropdown" style="top:50px;">
+
+
+			<div style="margin-bottom: 20px;justify-content: center;text-align: center;" class="search-student">
+			<span id="heading">
+        <h1 >Searchme</h1>
+             </span>
+                    <input type="search" style="outline: none;border-bottom: 2px solid var(--cyan);margin: auto;width:100%;" placeholder="Search any student">
+                    <button class="apply-filter" style="margin-top: 20px;text-align: center;border-radius:30px;justify-content: center;background-color: var(--cyan);">
+                        <b>SEARCH</b>
+                    </button><br>
+                </div>
+
+
 				<label for="cars" id="tittle">Course:</label>
 				<select name="cars" id="cars" title="Select your Course">
 					<option value="B.Tech">B.Tech</option>
