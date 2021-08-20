@@ -82,7 +82,7 @@
 
 	}
 
-	#cars {
+	.cars {
 		margin-top: 10px;
 		height: 31px;
 		width: 19em !important;
@@ -309,7 +309,7 @@
 
 		}
 
-		#cars {
+		.cars {
 			margin-top: 4px;
 			height: 30px;
 			width: 15em !important;
@@ -381,14 +381,14 @@
 		<div >
 
 
-			<form class="dropdown" style="top:50px;">
+			<form id="form_com" class="dropdown" style="top:50px;">
 
 
 			<div style="margin-bottom: 20px;justify-content: center;text-align: center;" class="search-student">
 			<span id="heading">
         <h1 >Searchme</h1>
              </span>
-                    <input type="search" style="outline: none;border-bottom: 2px solid var(--cyan);margin: auto;width:100%;" placeholder="Search any student">
+                    <input type="search" id="search_input" style="outline: none;border-bottom: 2px solid var(--cyan);margin: auto;width:100%;" placeholder="Search any student">
                     <button class="apply-filter" style="margin-top: 20px;text-align: center;border-radius:30px;justify-content: center;background-color: var(--cyan);">
                         <b>SEARCH</b>
                     </button><br>
@@ -396,15 +396,17 @@
 
 
 				<label for="cars" id="tittle">Course:</label>
-				<select name="cars" id="cars" title="Select your Course">
+				<select name="cars" id="filter_course" class="cars" title="Select your Course">
+					<option value="">-Select-</option>
 					<option value="B.Tech">B.Tech</option>
 					<option value="M. Tech">M. Tech</option>
 					<option value="MCA">MCA</option>
 					<option value="MBA">MBA</option>
-				</select><br>
+				</select><br> 
 
 				<label for="cars" id="tittle">Branch:</label>
-				<select name="cars" id="cars" title="Select your Branch">
+				<select name="cars" class="cars" id="filter_branch" title="Select your Branch">
+				<option value="">-Select-</option>
 					<option value="Computer Science & Engineering">Computer Science & Engineering</option>
 					<option value="Computer Science & Technology">Computer Science & Technology</option>
 					<option value="Computer Science & IT">Computer Science & IT</option>
@@ -418,7 +420,8 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Year :</label>
-				<select name="cars" id="cars" style="width: 16em;" title="Select your Year">
+				<select name="cars" id="filter_year"  class="cars" style="width: 16em;" title="Select your Year">
+					<option value="">-Select-</option>
 					<option value="1st Year">1st Year</option>
 					<option value="2nd Year">2nd Year</option>
 					<option value="3rd Year">3rd Year</option>
@@ -426,8 +429,10 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Hostel No:</label>
-				<select name="cars" id="cars" style="width: 13.6em;" title="Select your Hostel no">
+				<select name="cars" id="filter_hostel"  class="cars" style="width: 13.6em;" title="Select your Hostel no">
+					<option value="">-Select-</option>
 					<optgroup label="Girls">
+						
 						<option value="GH 1">GH 1</option>
 						<option value="GH 2">GH 2</option>
 						<option value="GH 3">GH 3</option>
@@ -456,15 +461,17 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Room No:</label>
-				<select name="cars" id="cars" style="width: 14em;" title="Select your Room no">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
+				<select name="cars" id="filter_room_no"  class="cars" style="width: 14em;" title="Select your Room no">
+					<option value="">-Select-</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
 				</select><br>
 
 				<label for="cars" id="tittle">State:</label>
-				<select name="cars" id="cars" style="width: 15.7em;" title="Select your State">
+				<select name="cars" id="filter_state" class="cars" style="width: 15.7em;" title="Select your State">
+					<option value="">-Select-</option>
 					<option value="Andhra Pradesh">Andhra Pradesh</option>
 					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -504,23 +511,25 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Day Schlor/Hostel:</label>
-				<select name="cars" id="cars" style="width:9.5em;" title="Day Schlor/Hostel">
+				<select name="cars" id="filter_living" class="cars" style="width:9.5em;" title="Day Schlor/Hostel">
+					<option value="">-Select-</option>
 					<option value="Day Scholar">Day Scholar</option>
 					<option value="Hostel">Hostel</option>
 				</select><br>
 				<label for="cars" id="tittle">Lateral Entry: </label>
-				<select name="cars" id="cars" style="width: 12em;" title="Lateral Entry">
+				<select name="cars" id="filter_islateral" class="cars" style="width: 12em;" title="Lateral Entry">
+					<option value="">-Select-</option>
 					<option value="Regular">Regular</option>
 					<option value="Lateral Entry">Lateral Entry</option>
 				</select><br>
 
-				<button class="apply-filter" style="margin-top: 20px;">
+				<button id="apply_filter" class="apply-filter" style="margin-top: 20px;">
 					<b> APPLY FILTER</b>
 				</button><br>
 				<hr>
 
 				<label for="cars" id="tittle">Name:</label>
-				<select name="cars" id="cars" style="margin-top: 5px;width: 10.8em;">
+				<select name="cars" class="cars" style="margin-top: 5px;width: 10.8em;">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="opel">Opel</option>
@@ -528,7 +537,7 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Year:</label>
-				<select name="cars" id="cars" style="width: 11.4em;">
+				<select name="cars" class="cars" style="width: 11.4em;">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="opel">Opel</option>
@@ -536,7 +545,7 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Gender:</label>
-				<select name="cars" id="cars" style="width: 10em;">
+				<select name="cars" class="cars" style="width: 10em;">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="opel">Opel</option>
@@ -729,10 +738,15 @@
 		</div>
 	</div>
 
+<?php
+	$search_get=$_GET['search'];
 
+?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
 
 	<script>
 		var key = "<?php echo $this->security->get_csrf_hash(); ?>";
@@ -749,27 +763,58 @@
 			};
 		}
 
+		$("#search_input").val("<?=$search_get;?>");
+
+		$("#form_com").submit(function(e){
+			e.preventDefault();
+		});
+
+		$("#apply_filter").click(function(e) {
+			e.preventDefault();
+			main_ajax();
+
+		});
+		
+
+	function search_output(){
+        search_box_url=$("#search_input").val();
+        if(search_box_url!=""){
+            window.history.replaceState(null, null, "<?=base_url('main/search_filter');?>?search="+$("#search_input").val());
+        }
+        
+
+        // load_page_content(1);
+	}
+
+	function main_ajax(){
 		$.ajax({
 			url: "<?= base_url('main_helper/filter_data_search'); ?>",
 			type: "POST",
 			async: false,
 			data: {
 				"<?php echo $this->security->get_csrf_token_name(); ?>": key,
-				course: "",
-				branch: "",
-				hostel_no: "",
-				room_no: "",
-				address: ""
+				search_text:$("#search_input").val(),
+				course: $("#filter_course").val(),
+				branch: $("#filter_branch").val(),
+				hostel_no: $("#filter_hostel").val(),
+				room_no: $("#filter_room_no").val(),
+				state: $("#filter_state").val(),
+				living: $("#filter_living").val(),
+				islateral: $("#filter_islateral").val()
 			},
 			dataType: "json",
 			success: function(data) {
+				key=data.key;
 				console.log(data);
+				search_output();
 
 			},
 			error: function(data) {
 				console.log(data);
 			}
 		});
+	}
+	main_ajax();
 	</script>
 
 </body>

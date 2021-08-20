@@ -241,13 +241,42 @@ public function filter_data_search(){
 	$input=$this->security->xss_clean($this->input->post());
 	
 	$this->db->select("a.first_name,a.last_name,a.middle_name,a.gender,b.course,b.branch")->from("user_detail as a");
-	// $this->db->where(['course'=>$input['course'], 'branch'=>$input['branch'], 'hostel_no'=>$input['hostel_no'],'room_no'=>$input['room_no'],'address1'=>$input['address']]);
 	$this->db->join("user_addon_data as b","a.sn=b.user_id");
+	
+	if(isset($input['search_text'])&&$input['search_text']!=""){
+		$this->db->group_start();
+			$this->db->like('a.first_name',$input['search_text']);
+			$this->db->or_like('a.middle_name',$input['search_text']);
+			$this->db->or_like('a.last_name',$input['search_text']);
+			$this->db->or_like('b.reg_no',$input['search_text']);
+			$this->db->or_like('b.roll_no',$input['search_text']);
+			$this->db->or_like('b.address1',$input['search_text']);
+		$this->db->group_end();
+	}
+	if($input['course']!=""){
+		$this->db->where('b.course',$input['course']);
+	}
+	if($input['branch']!=""){
+		$this->db->where('b.branch',$input['branch']);
+	}
+	if($input['hostel_no']!=""){
+		$this->db->where('b.hostel_no',$input['hostel_no']);
+	}
+	if($input['room_no']!=""){
+		$this->db->where('b.room_no',$input['room_no']);
+	}
+	if($input['state']!=""){
+		$this->db->where('b.state',$input['state']);
+	}
+	
+	
 	$data['data']=$this->db->get()->result();
 	
+	$data['input'] =$input;
 	$data['key']=$this->security->get_csrf_hash();
 	echo json_encode($data);	
 }
+
 
  
 

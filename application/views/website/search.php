@@ -35,7 +35,7 @@ $this->load->view('website/link_import');
             
         }
 
-        #form {
+        #search_form {
             background-color:var(--cyan);
             
             width: 600px;
@@ -124,7 +124,7 @@ $this->load->view('website/link_import');
     }
 
         @media only screen and (max-width: 720px) {
-            #form {
+            #search_form {
                 margin-top: 15em;
                
             
@@ -169,10 +169,9 @@ $this->load->view('website/nav_bar');
         <h1 >S e a r c h  m e</h1>
     </span>
     
-    <form role="search" id="form">
+    <form id="search_form">
         
-        <div></div>
-        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <input type="search" id="search_input"  name="q" placeholder="Search..." >
         <button id="search_icon" class="icon">
             <img src="<?=base_url();?>assets/images/search-3-24.png" >
         </button>
@@ -187,23 +186,37 @@ $this->load->view('website/nav_bar');
 
 
     <script>
-        const f = document.getElementById('form');
-        const q = document.getElementById('query');
+        
 
+        // $("#search_icon").click(function(e) {
+        //     e.preventDefault();
+        //     location.href="<?=base_url('main/search_filter')?>";
+        // });
 
-        function submitted(event) {
-            event.preventDefault();
-            const url = google + site + '+' + q.value;
-            const win = window.open(url, '_blank');
-            win.focus();
-        }
-
-        f.addEventListener('submit', submitted);
-
-        $("#search_icon").click(function(e) {
+        $("#search_form").submit(function(e) {
             e.preventDefault();
-            location.href="<?=base_url('main/search_filter')?>";
+            var search_input=$("#search_input").val();
+            location.href="<?=base_url('main/search_filter?search=')?>"+search_input;
+            
+            // $.ajax({
+            //     url: "<?= base_url('main_helper/get_user_account_data'); ?>",
+            //     type: "POST",
+            //     async: false,
+            //     data: { 
+            //         "<?php echo $this->security->get_csrf_token_name(); ?>": key,
+            //         user_id: "<?= $this->session->userdata("searchme_login"); ?>"
+            //     },
+            //     dataType: "json",
+            //     success: function(data) {
+            //         console.log(data.data);
+            //     },
+            //     error:function(data){
+            //         console.log(data);
+            //     }
+            // });
         });
+
+
     </script>
 </body>
 
