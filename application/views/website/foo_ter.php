@@ -21,6 +21,6 @@
             </div>    
         </div>
         <div class="row">
-            <p class="font-weight-normal color-muted">Made with <span class="text-danger">&#10084;</span> by SrchMe Team</h6>
+            <p class="font-weight-normal color-muted">Made with <span class="text-danger">&#10084;</span> by SearchMe Team</h6>
         </div>
     </section>

@@ -8,6 +8,11 @@
         .landing{
             height: max-content;
         }
+        .features .card-wrap{
+            width: 221px !important;
+            background-color: var(--dark-blue);
+            filter: drop-shadow(8px 8px 16px rgba(29, 51, 84, 0.24));
+        }
     }
 
 .landing-image-wrap{
@@ -68,7 +73,7 @@
 }
 
 .features .card-wrap{
-    width: 272px;
+    width: 221px !important;
     background-color: var(--dark-blue);
     filter: drop-shadow(8px 8px 16px rgba(29, 51, 84, 0.24));
 }
