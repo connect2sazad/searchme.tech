@@ -16,12 +16,12 @@
 
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 
@@ -36,26 +36,28 @@
 </head>
 
 <style>
-	:root{
-    --light: #E9FFF9;
-    --cyan: #9ED8D8;
-    --dark-blue: #1D3354;
-    --dark: #121212;
-    --muted: #4F678B;
-}
-	#nav{
+	:root {
+		--light: #E9FFF9;
+		--cyan: #9ED8D8;
+		--dark-blue: #1D3354;
+		--dark: #121212;
+		--muted: #4F678B;
+	}
+
+	#nav {
 		position: fixed !important;
 		z-index: 9 !important;
 	}
+
 	body {
 		background-color: #1D3354;
 	}
 
-	
+
 	label {
-    display: inline-block;
-    margin-bottom: -0.5rem;
-}
+		display: inline-block;
+		margin-bottom: -0.5rem;
+	}
 
 	.main-content {
 		display: flex;
@@ -120,10 +122,11 @@
 	#filter-btn {
 		display: none;
 	}
-	.filter-section{
+
+	.filter-section {
 
 		z-index: -1;
-		
+
 	}
 
 	.filter-section form {
@@ -133,10 +136,10 @@
 		padding: 72px;
 		height: 100%;
 		bottom: 0%;
-		margin-top:71px;
+		margin-top: 71px;
 
 		width: 72em;
-		border-radius:0 8px 0 0;
+		border-radius: 0 8px 0 0;
 
 
 
@@ -200,36 +203,37 @@
 	}
 
 	.dropdown::-webkit-scrollbar {
-  width: 15px !important;
-  border-radius: 100px;
-}
- 
-
- 
-.dropdown::-webkit-scrollbar-thumb {
-  background-color: #384861 !important;
-  
-  border-radius: 100px;
-
-}
-
-.apply-filter {
-        background-color: #4F678B;
-        height: 45px;
-        width: 15em;
-        border-radius: 5px;
-        border: 2px solid white;
-        color: white;
+		width: 15px !important;
+		border-radius: 100px;
+	}
 
 
-    }
-	#heading h1{
-            
-            color:var(--cyan);
-            font-family: 'Cabin', sans-serif;
 
-            font-size: 2.6em;
-        }
+	.dropdown::-webkit-scrollbar-thumb {
+		background-color: #384861 !important;
+
+		border-radius: 100px;
+
+	}
+
+	.apply-filter {
+		background-color: #4F678B;
+		height: 45px;
+		width: 15em;
+		border-radius: 5px;
+		border: 2px solid white;
+		color: white;
+
+
+	}
+
+	#heading h1 {
+
+		color: var(--cyan);
+		font-family: 'Cabin', sans-serif;
+
+		font-size: 2.6em;
+	}
 
 
 	@media only screen and (max-width: 600px) {
@@ -332,28 +336,30 @@
 
 		}
 
-		
+
 
 		.apply-filter {
-            
-            height: 38px;
-            width: 17em;
-            border-radius: 5px;
-            border: 2px solid white;
-            color: white;
-            font-size: 13px;
-            z-index: 1111;
+
+			height: 38px;
+			width: 17em;
+			border-radius: 5px;
+			border: 2px solid white;
+			color: white;
+			font-size: 13px;
+			z-index: 1111;
 
 
-        }
-		.search-student input{
-			width:100% !important;
 		}
-		#heading h1{
-            font-weight:;
-            color:var(--cyan);
-            font-size: 2em;
-        }
+
+		.search-student input {
+			width: 100% !important;
+		}
+
+		#heading h1 {
+			font-weight: ;
+			color: var(--cyan);
+			font-size: 2em;
+		}
 
 	}
 </style>
@@ -377,36 +383,36 @@
 	$this->load->view('website/nav_bar');
 	?>
 
-	<div class="filter-section" style="margin-top:0;" >
-		<div >
+	<div class="filter-section" style="margin-top:0;">
+		<div>
 
 
 			<form id="form_com" class="dropdown" style="top:50px;">
 
 
-			<div style="margin-bottom: 20px;justify-content: center;text-align: center;" class="search-student">
-			<span id="heading">
-        <h1 >Searchme</h1>
-             </span>
-                    <input type="search" id="search_input" style="outline: none;border-bottom: 2px solid var(--cyan);margin: auto;width:100%;" placeholder="Search any student">
-                    <button class="apply-filter" style="margin-top: 20px;text-align: center;border-radius:30px;justify-content: center;background-color: var(--cyan);">
-                        <b>SEARCH</b>
-                    </button><br>
-                </div>
+				<div style="margin-bottom: 20px;justify-content: center;text-align: center;" class="search-student">
+					<span id="heading">
+						<h1>Searchme</h1>
+					</span>
+					<input type="search" id="search_input" style="outline: none;border-bottom: 2px solid var(--cyan);margin: auto;width:100%;" placeholder="Search any student">
+					<button class="apply-filter" style="margin-top: 20px;text-align: center;border-radius:30px;justify-content: center;background-color: var(--cyan);">
+						<b>SEARCH</b>
+					</button><br>
+				</div>
 
 
 				<label for="cars" id="tittle">Course:</label>
 				<select name="cars" id="filter_course" class="cars" title="Select your Course">
 					<option value="">-Select-</option>
 					<option value="B.Tech">B.Tech</option>
-					<option value="M. Tech">M. Tech</option>
+					<option value="M.Tech">M. Tech</option>
 					<option value="MCA">MCA</option>
 					<option value="MBA">MBA</option>
-				</select><br> 
+				</select><br>
 
 				<label for="cars" id="tittle">Branch:</label>
 				<select name="cars" class="cars" id="filter_branch" title="Select your Branch">
-				<option value="">-Select-</option>
+					<option value="">-Select-</option>
 					<option value="Computer Science & Engineering">Computer Science & Engineering</option>
 					<option value="Computer Science & Technology">Computer Science & Technology</option>
 					<option value="Computer Science & IT">Computer Science & IT</option>
@@ -420,7 +426,7 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Year :</label>
-				<select name="cars" id="filter_year"  class="cars" style="width: 16em;" title="Select your Year">
+				<select name="cars" id="filter_year" class="cars" style="width: 16em;" title="Select your Year">
 					<option value="">-Select-</option>
 					<option value="1st Year">1st Year</option>
 					<option value="2nd Year">2nd Year</option>
@@ -429,10 +435,10 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Hostel No:</label>
-				<select name="cars" id="filter_hostel"  class="cars" style="width: 13.6em;" title="Select your Hostel no">
+				<select name="cars" id="filter_hostel" class="cars" style="width: 13.6em;" title="Select your Hostel no">
 					<option value="">-Select-</option>
 					<optgroup label="Girls">
-						
+
 						<option value="GH 1">GH 1</option>
 						<option value="GH 2">GH 2</option>
 						<option value="GH 3">GH 3</option>
@@ -461,7 +467,7 @@
 				</select><br>
 
 				<label for="cars" id="tittle">Room No:</label>
-				<select name="cars" id="filter_room_no"  class="cars" style="width: 14em;" title="Select your Room no">
+				<select name="cars" id="filter_room_no" class="cars" style="width: 14em;" title="Select your Room no">
 					<option value="">-Select-</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -582,9 +588,9 @@
 
 		<div class="student-data">
 
-			<div class="row d-flex justify-content-center">
+			<div class="row d-flex justify-content-center" id="results-information-section">
 
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;margin-top: 0;background-color:var(--light);">
+				<div class="card mb-4  row d-flex justify-content-center" id="clone-sample" style="max-width: 680px;margin-top: 0;background-color:var(--light);">
 					<div class="row g-1" id="color">
 						<div class="col-md-4">
 							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;border-color: white;">
@@ -593,11 +599,11 @@
 							<div class="card-body" style="">
 								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
 								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
+									<li class="card-text"><strong>Name:</strong><span data-id="name">Aditya Chowdhary</span></li>
+									<li class="card-text"><strong>Course:</strong><span data-id="course">Btech</span></li>
+									<li class="card-text"><strong>Branch:</strong><span data-id="branch">ECE</span></li>
+									<!-- <li class="card-text"><strong>Passion:</strong>Designing</li>
+									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li> -->
 								</ul>
 
 
@@ -611,137 +617,13 @@
 			</div>
 
 
-			<div class="row d-flex justify-content-center">
-
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;background-color:var(--light);">
-					<div class="row g-1">
-						<div class="col-md-4">
-							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;">
-						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
-								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
-								</ul>
-								<button class="profile">Profile</button>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row d-flex justify-content-center">
-
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;background-color:var(--light);">
-					<div class="row g-1">
-						<div class="col-md-4">
-							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;">
-						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
-								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
-								</ul>
-								<button class="profile">Profile</button>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row d-flex justify-content-center">
-
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;background-color:var(--light);">
-					<div class="row g-1">
-						<div class="col-md-4">
-							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;">
-						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
-								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
-								</ul>
-								<button class="profile">Profile</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row d-flex justify-content-center">
-
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;background-color:var(--light);">
-					<div class="row g-1">
-						<div class="col-md-4">
-							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;">
-						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
-								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
-								</ul>
-								<button class="profile">Profile</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row d-flex justify-content-center">
-
-				<div class="card mb-4  row d-flex justify-content-center" style="max-width: 680px;background-color:var(--light);">
-					<div class="row g-1">
-						<div class="col-md-4">
-							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;">
-						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
-								<ul>
-									<li class="card-text"><strong>Name:</strong>Aditya Chowdhary</li>
-									<li class="card-text"><strong>Degree:</strong>Btech</li>
-									<li class="card-text"><strong>Branch:</strong>ECE</li>
-									<li class="card-text"><strong>Passion:</strong>Designing</li>
-									<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li>
-								</ul>
-								<button class="profile">Profile</button>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
-<?php
-	$search_get=$_GET['search'];
+	<?php
+	$search_get = $_GET['search'];
 
-?>
+	?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -763,9 +645,9 @@
 			};
 		}
 
-		$("#search_input").val("<?=$search_get;?>");
+		$("#search_input").val("<?= $search_get; ?>");
 
-		$("#form_com").submit(function(e){
+		$("#form_com").submit(function(e) {
 			e.preventDefault();
 		});
 
@@ -774,47 +656,70 @@
 			main_ajax();
 
 		});
-		
 
-	function search_output(){
-        search_box_url=$("#search_input").val();
-        if(search_box_url!=""){
-            window.history.replaceState(null, null, "<?=base_url('main/search_filter');?>?search="+$("#search_input").val());
-        }
-        
 
-        // load_page_content(1);
-	}
-
-	function main_ajax(){
-		$.ajax({
-			url: "<?= base_url('main_helper/filter_data_search'); ?>",
-			type: "POST",
-			async: false,
-			data: {
-				"<?php echo $this->security->get_csrf_token_name(); ?>": key,
-				search_text:$("#search_input").val(),
-				course: $("#filter_course").val(),
-				branch: $("#filter_branch").val(),
-				hostel_no: $("#filter_hostel").val(),
-				room_no: $("#filter_room_no").val(),
-				state: $("#filter_state").val(),
-				living: $("#filter_living").val(),
-				islateral: $("#filter_islateral").val()
-			},
-			dataType: "json",
-			success: function(data) {
-				key=data.key;
-				console.log(data);
-				search_output();
-
-			},
-			error: function(data) {
-				console.log(data);
+		function search_output() {
+			search_box_url = $("#search_input").val();
+			if (search_box_url != "") {
+				window.history.replaceState(null, null, "<?= base_url('main/search_filter'); ?>?search=" + $("#search_input").val());
 			}
-		});
-	}
-	main_ajax();
+
+
+			// load_page_content(1);
+		}
+
+		function main_ajax() {
+			$.ajax({
+				url: "<?= base_url('main_helper/filter_data_search'); ?>",
+				type: "POST",
+				async: false,
+				data: {
+					"<?php echo $this->security->get_csrf_token_name(); ?>": key,
+					search_text: $("#search_input").val(),
+					course: $("#filter_course").val(),
+					branch: $("#filter_branch").val(),
+					hostel_no: $("#filter_hostel").val(),
+					room_no: $("#filter_room_no").val(),
+					state: $("#filter_state").val(),
+					living: $("#filter_living").val(),
+					islateral: $("#filter_islateral").val()
+				},
+				dataType: "json",
+				success: function(data) {
+					key = data.key;
+
+					console.log(data.data[0])
+
+					if (data.data.length >= 1) {
+						var clone_sample = $('#clone-sample');
+						
+						var clone_no = 0;
+						data.data.forEach(element => {
+							clone_sample.clone(true).attr('id', 'clone-'+clone_no).appendTo('#results-information-section');
+							clone_no++;
+						});
+						clone_sample.remove();
+
+						for (let index = 0; index < clone_no; index++) {
+							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='name']").text(" "+data.data[index]['first_name']+" "+data.data[index]['middle_name']+" "+data.data[index]['last_name']);
+							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='course']").text(" "+data.data[index]['course']);
+							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='branch']").text(" "+data.data[index]['branch']);
+							
+						}
+
+					} else {
+						$('#results-information-section').text("No results found!");
+					}
+					// console.log(data.data.length);
+					search_output();
+
+				},
+				error: function(data) {
+					console.log(data);
+				}
+			});
+		}
+		main_ajax();
 	</script>
 
 </body>
