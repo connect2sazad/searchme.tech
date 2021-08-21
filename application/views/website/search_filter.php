@@ -31,7 +31,24 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
+	<script>
+		function get_branches(e) {
+			if (e.value === "B.Tech") {
+				$('#filter_branch').empty();
+				$('#filter_branch').html('<option value="Computer Science & Engineering">Computer Science & Engineering</option><option value="Computer Science & Technology">Computer Science & Technology</option><option value="Computer Science & IT">Computer Science & IT</option><option value="Computer Science Engineering & Artificial Intelligence">Computer Science Engineering & Artificial Intelligence</option><option value="Computer Science Engineering & Data Science">Computer Science Engineering & Data Science</option><option value="Electronics & Communication Engineering">Electronics & Communication Engineering</option><option value="Electrical Engineering">Electrical Engineering</option><option value="Electrical & Electronics Engineering">Electrical & Electronics Engineering</option><option value="Mechanical Engineering">Mechanical Engineering</option><option value="Civil Engineering">Civil Engineering</option>');
+				$('#filter_branch').prop('disabled', false);
+			} else if (e.value === "M.Tech") {
+				$('#filter_branch').html('<option value="Electrical Engineering (Power System)">Electrical Engineering (Power System)</option><option value="Computer Sc Engg/Tech/IT">Computer Sc Engg/Tech/IT</option><option value="Mechanical Engineering (Thermal)">Mechanical Engineering (Thermal)</option><option value="Mechanical Engineering (Production Engineering)">Mechanical Engineering (Production Engineering)</option>');
+				$('#filter_branch').prop('disabled', false);
+			} else if (e.value === "MBA") {
+				$('#filter_branch').html('<option value="MBA">MBA</option>');
+				$('#filter_branch').prop('disabled', 'disabled');
+			} else if (e.value === "MCA") {
+				$('#filter_branch').html('<option value="MCA">MCA</option>');
+				$('#filter_branch').prop('disabled', 'disabled');
+			}
+		}
+	</script>
 
 </head>
 
@@ -402,7 +419,7 @@
 
 
 				<label for="cars" id="tittle">Course:</label>
-				<select name="cars" id="filter_course" class="cars" title="Select your Course">
+				<select name="cars" id="filter_course" class="cars" title="Select your Course" onchange="get_branches(this)">
 					<option value="">-Select-</option>
 					<option value="B.Tech">B.Tech</option>
 					<option value="M.Tech">M. Tech</option>
@@ -692,19 +709,19 @@
 
 					if (data.data.length >= 1) {
 						var clone_sample = $('#clone-sample');
-						
+
 						var clone_no = 0;
 						data.data.forEach(element => {
-							clone_sample.clone(true).attr('id', 'clone-'+clone_no).appendTo('#results-information-section');
+							clone_sample.clone(true).attr('id', 'clone-' + clone_no).appendTo('#results-information-section');
 							clone_no++;
 						});
 						clone_sample.remove();
 
 						for (let index = 0; index < clone_no; index++) {
-							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='name']").text(" "+data.data[index]['first_name']+" "+data.data[index]['middle_name']+" "+data.data[index]['last_name']);
-							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='course']").text(" "+data.data[index]['course']);
-							$("#clone-"+index+" .row .col-md-8 .card-body ul li [data-id='branch']").text(" "+data.data[index]['branch']);
-							
+							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='name']").text(" " + data.data[index]['first_name'] + " " + data.data[index]['middle_name'] + " " + data.data[index]['last_name']);
+							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='course']").text(" " + data.data[index]['course']);
+							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='branch']").text(" " + data.data[index]['branch']);
+
 						}
 
 					} else {
