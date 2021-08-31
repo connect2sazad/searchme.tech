@@ -2,7 +2,7 @@
     $sign_btn="";
     $sing_url="";
     if(!$this->security->xss_clean($this->session->userdata('searchme_login'))){
-        $sign_btn="Sing in";
+        $sign_btn="Sign in";
         $sing_url="signup";
     }else{
         $sign_btn="Account";

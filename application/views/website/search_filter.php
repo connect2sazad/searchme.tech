@@ -705,24 +705,46 @@
 				success: function(data) {
 					key = data.key;
 
-					console.log(data.data[0])
+					// console.log(data.data);
+					// console.log(data.data.length);
+					var student_html = "";
 
 					if (data.data.length >= 1) {
-						var clone_sample = $('#clone-sample');
+						// var clone_sample = $('#clone-sample');
 
-						var clone_no = 0;
+						// var clone_no = 0;
+						// data.data.forEach(element => {
+						// 	clone_sample.clone(true).attr('id', 'clone-' + clone_no).appendTo('#results-information-section');
+						// 	clone_no++;
+						// });
+						// clone_sample.html("");
+
+						// for (let index = 0; index < clone_no; index++) {
+						// 	$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='name']").text(" " + data.data[index]['first_name'] + " " + data.data[index]['middle_name'] + " " + data.data[index]['last_name']);
+						// 	$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='course']").text(" " + data.data[index]['course']);
+						// 	$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='branch']").text(" " + data.data[index]['branch']);
+
+						// }
 						data.data.forEach(element => {
-							clone_sample.clone(true).attr('id', 'clone-' + clone_no).appendTo('#results-information-section');
-							clone_no++;
+							console.log(element);
+							student_html += '<div class="card mb-4  row d-flex justify-content-center" id="clone-sample" style="max-width: 680px;margin-top: 0;background-color:var(--light);">';
+							student_html += '<div class="row g-1" id="color">';
+							student_html += '<div class="col-md-4">';
+							student_html += '<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;border-color: white;">';
+							student_html += '</div>';
+							student_html += '<div class="col-md-8">';
+							student_html += '<div class="card-body" style="">';
+							student_html += '<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>';
+							student_html += '<ul>';
+							student_html += '<li class="card-text"><strong>Name:</strong><span data-id="name"> '+element['first_name']+' '+element['middle_name']+' '+element['last_name']+'</span></li>';
+							student_html += '<li class="card-text"><strong>Course:</strong><span data-id="course"> '+element['course']+'</span></li>';
+							student_html += '<li class="card-text"><strong>Branch:</strong><span data-id="branch"> '+element['branch']+'</span></li>';
+							student_html += '<!-- <li class="card-text"><strong>Passion:</strong>Designing</li>';
+							student_html += '<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li> -->';
+							student_html += '</ul>';
+							student_html += '<button class="profile">Profile</button></div></div></div></div>';
 						});
-						clone_sample.remove();
-
-						for (let index = 0; index < clone_no; index++) {
-							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='name']").text(" " + data.data[index]['first_name'] + " " + data.data[index]['middle_name'] + " " + data.data[index]['last_name']);
-							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='course']").text(" " + data.data[index]['course']);
-							$("#clone-" + index + " .row .col-md-8 .card-body ul li [data-id='branch']").text(" " + data.data[index]['branch']);
-
-						}
+						$("#results-information-section").html(student_html);
 
 					} else {
 						$('#results-information-section').text("No results found!");

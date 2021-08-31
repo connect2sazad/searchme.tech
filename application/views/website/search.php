@@ -31,7 +31,7 @@ $this->load->view('website/link_import');
             background-color: var(--dark-blue);
             margin: 0;
             padding: 0%;
-            overflow: hidden;
+            /* overflow: hidden; */
             
         }
 
@@ -180,6 +180,11 @@ $this->load->view('website/nav_bar');
     <span id="image">
         <img src="<?=base_url();?>assets/images/search.svg" alt="">
     </span>
+
+	<?php
+
+        $this->load->view('website/foo_ter');
+    ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
