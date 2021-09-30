@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Search Results</title>
 	<?php
 
 	$this->load->view('website/link_import');
@@ -373,7 +373,7 @@
 		}
 
 		#heading h1 {
-			font-weight: ;
+			font-weight: normal;
 			color: var(--cyan);
 			font-size: 2em;
 		}
@@ -531,49 +531,39 @@
 					<option value="Uttar Pradesh">Uttar Pradesh</option>
 					<option value="Uttarakhand">Uttarakhand</option>
 					<option value="West Bengal">West Bengal</option>
-				</select><br>
+				</select><br><br>
 
-				<label for="cars" id="tittle">Day Schlor/Hostel:</label>
-				<select name="cars" id="filter_living" class="cars" style="width:9.5em;" title="Day Schlor/Hostel">
+				<label for="living_type" id="tittle">Living Type:</label>
+				<select name="cars" id="filter_year" class="cars" style="width: 16em;" title="Select your Year">
 					<option value="">-Select-</option>
+					<option value="All">All</option>
 					<option value="Day Scholar">Day Scholar</option>
-					<option value="Hostel">Hostel</option>
-				</select><br>
-				<label for="cars" id="tittle">Lateral Entry: </label>
-				<select name="cars" id="filter_islateral" class="cars" style="width: 12em;" title="Lateral Entry">
-					<option value="">-Select-</option>
-					<option value="Regular">Regular</option>
-					<option value="Lateral Entry">Lateral Entry</option>
-				</select><br>
+					<option value="Hosteler">Hosteler</option>
+				</select><br><br>
+				
+				<!-- <label for="lateral_entry" id="tittle">Lateral Entry: </label> -->
+				<input type="checkbox" name="lateral_entry" id="lateral_entry"> Lateral Entry
+				<br>
 
 				<button id="apply_filter" class="apply-filter" style="margin-top: 20px;">
 					<b> APPLY FILTER</b>
 				</button><br>
 				<hr>
 
-				<label for="cars" id="tittle">Name:</label>
-				<select name="cars" class="cars" style="margin-top: 5px;width: 10.8em;">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select><br>
+				<label for="alphabets" id="tittle">Sort By Alphabet:</label><br>
+				<input type="radio" name="alphabets" id="alphabets"> A - Z <br>
+				<input type="radio" name="alphabets" id="alphabets"> Z - A
+				<br><br>
 
-				<label for="cars" id="tittle">Year:</label>
-				<select name="cars" class="cars" style="width: 11.4em;">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select><br>
+				<label for="sort_year" id="tittle">Sort By Year:</label><br>
+				<input type="radio" name="sort_year" id="sort_year"> 1st year - 4th year <br>
+				<input type="radio" name="sort_year" id="sort_year"> 4th year - 1st year
+				<br><br>
 
-				<label for="cars" id="tittle">Gender:</label>
-				<select name="cars" class="cars" style="width: 10em;">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select><br>
+				<label for="sort_roll" id="tittle">Sort By Roll No:</label><br>
+				<input type="radio" name="sort_roll" id="sort_roll"> University Registration No <br>
+				<input type="radio" name="sort_roll" id="sort_roll"> College Roll No
+				<br><br>
 
 				<button class="apply-filter" style="margin-top: 15px;">
 					<b> SORT</b>
@@ -613,7 +603,7 @@
 							<img src="<?= base_url('assets/images/dummy.jpg'); ?>" class="img-fluid rounded-start" alt="..." style="padding: 30px;border-color: white;">
 						</div>
 						<div class="col-md-8">
-							<div class="card-body" style="">
+							<div class="card-body">
 								<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>
 								<ul>
 									<li class="card-text"><strong>Name:</strong><span data-id="name">Aditya Chowdhary</span></li>
@@ -648,6 +638,9 @@
 
 
 	<script>
+
+		document.title = 'Searched for "<?php echo $search_get; ?>"';
+
 		var key = "<?php echo $this->security->get_csrf_hash(); ?>";
 
 		function myFunctions() {
@@ -736,9 +729,9 @@
 							student_html += '<div class="card-body" style="">';
 							student_html += '<h4 class="card-title" style="color:rgb(32, 161, 161);"><b>GITA BBSR</b></h4>';
 							student_html += '<ul>';
-							student_html += '<li class="card-text"><strong>Name:</strong><span data-id="name"> '+element['first_name']+' '+element['middle_name']+' '+element['last_name']+'</span></li>';
-							student_html += '<li class="card-text"><strong>Course:</strong><span data-id="course"> '+element['course']+'</span></li>';
-							student_html += '<li class="card-text"><strong>Branch:</strong><span data-id="branch"> '+element['branch']+'</span></li>';
+							student_html += '<li class="card-text"><strong>Name:</strong><span data-id="name"> ' + element['first_name'] + ' ' + element['middle_name'] + ' ' + element['last_name'] + '</span></li>';
+							student_html += '<li class="card-text"><strong>Course:</strong><span data-id="course"> ' + element['course'] + '</span></li>';
+							student_html += '<li class="card-text"><strong>Branch:</strong><span data-id="branch"> ' + element['branch'] + '</span></li>';
 							student_html += '<!-- <li class="card-text"><strong>Passion:</strong>Designing</li>';
 							student_html += '<li class="card-text"><strong>Extra Activity:</strong>Football,Dancing,Painting</li> -->';
 							student_html += '</ul>';

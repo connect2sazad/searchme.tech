@@ -53,3 +53,7 @@ User Profile
     - Set styling for the Account Name ( align it to the center of the screen )
     - Set styling for the 'Follow' & 'Message' button ( align it to the center of the screen )
     
+
+
+	 - Fix search page
+	 - Fix about us page
