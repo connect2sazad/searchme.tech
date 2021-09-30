@@ -63,6 +63,11 @@ class Main extends CI_Controller {
 		$this->load->view('website/search_filter');
 	}
 
+	public function aboutus(){
+		
+		$this->load->view('website/about');
+	}
+
 
 	public function logout() {
 		$this->session->unset_userdata("searchme_login");

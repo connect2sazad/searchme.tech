@@ -29,7 +29,7 @@
                             <a class="nav-link" href="<?=base_url('main/search');?>">Search</a>
                         </li>
                         <li class="nav-item mt-3 mt-md-0  mr-md-5">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="<?=base_url('main/aboutus');?>">About Us</a>
                         </li>
                         <!-- <li class="nav-item mt-3 mt-md-0  mr-md-5">
                             <a class="nav-link" href="<?=base_url('main/user_profile');?>">Account</a>

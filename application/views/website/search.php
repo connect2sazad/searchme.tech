@@ -163,7 +163,7 @@ $this->load->view('website/link_import');
 
 $this->load->view('website/nav_bar');
 ?>
-
+<div id="main_body_c">
 
     <span id="heading">
         <h1 >S e a r c h  m e</h1>
@@ -180,7 +180,7 @@ $this->load->view('website/nav_bar');
     <span id="image">
         <img src="<?=base_url();?>assets/images/search.svg" alt="">
     </span>
-
+</div>
 	<?php
 
         $this->load->view('website/foo_ter');
@@ -221,6 +221,8 @@ $this->load->view('website/nav_bar');
             // });
         });
 
+        $("#main_body_c").css('min-height',$(window).height()-300);
+        console.log($(window).height());
 
     </script>
 </body>
